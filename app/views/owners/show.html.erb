@@ -1,0 +1,49 @@
+<% provide(:title, 'Subscribers') %>
+<h1>Owners#show</h1>
+<p>Find me in app/views/owners/sholw.html.erb</p>
+
+<div class="container">
+	<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+			<center><h3>Owner Detail</h3></center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2">
+				<%= image_tag(@owner.owner_image.medium.url, size: "100") %>
+			</div>
+			<div class="col-sm-6">
+			<table>
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><%= @owner.name %></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>:</td>
+					<td><%= @owner.email %></td>
+				</tr>
+				<tr>
+					<td>IC</td>
+					<td>:</td>
+					<td><%= @owner.ic_number %></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td>:</td>
+					<td><%= @owner.address %></td>
+				</tr>
+			</table>
+			  
+			</div>
+			<div class="col-sm-2">
+			<%= link_to "Update", owner_path(@owner), class:"btn btn-warning"%>
+			</div>
+		</div>			
+		
+	</div>
+</div>
+</div>

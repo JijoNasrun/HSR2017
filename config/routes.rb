@@ -1,5 +1,39 @@
 Rails.application.routes.draw do
+  get 'devices/index'
+
+  get 'devices/show'
+
+  get 'devices/create'
+
+  get 'devices/new'
+
+  get 'devices/destroy'
+
+  get 'devices/edit'
+
+  get 'devices/update'
+
+  get 'owners/index'
+
+  get 'owners/show'
+
+  get '/registration', to: 'owners#new'
+
+  post '/registration', to: 'owners#create'
+
+  get 'owners/destroy'
+
+  get 'reports/index'
+
+  get 'reports/shownew'
+
+  get 'reports/create'
+
+  get 'reports/update'
+
   get 'users/new'
+
+  
 
   get 'sessions/new'
 
@@ -16,6 +50,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
 
+
+  resources :owners
 
   resources :users
 

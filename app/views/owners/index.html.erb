@@ -1,0 +1,27 @@
+<% provide(:title, 'Subscribers') %>
+<h1>List of Owners</h1>
+
+<ul>
+	<% @owners.each do |owner| %>
+	<li>
+		<table>
+			<tr>
+				<td>
+					<%= owner.name %>
+				</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>
+					<%= link_to "Show", owner_path(owner), class:"btn btn-info"%> 
+				</td>
+			</tr>
+		</table>
+		
+	</li>
+
+	<% end %>
+</ul>
+
+

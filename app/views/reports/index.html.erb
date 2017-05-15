@@ -1,0 +1,31 @@
+<% provide(:title, 'Report') %>
+<h1>Reports</h1>
+
+<%= will_paginate %>
+
+<ul class='a'>
+  <% @reports.each do |report| %>
+    
+    <li class='a' >
+    <table>
+    <tr>
+    	<td>
+    		<img src="<%= report.report_image %>" width = "304" height="236">
+    	</td>
+    	<td>&nbsp;</td>
+    	<td>
+    		Date : <%= report.date_captured %> <br>
+      		Description :<%= report.description %>
+    	</td>
+    </tr>
+    
+     
+    </table>  
+      
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+
