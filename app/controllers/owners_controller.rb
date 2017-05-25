@@ -11,6 +11,7 @@ class OwnersController < ApplicationController
   	@owner = Owner.new(owner_params)
   	if @owner.save
   	flash.now[:success] = "Owner Successfully created"
+  	render 'show'
   	else
   		render 'new'
   	end
@@ -21,6 +22,10 @@ class OwnersController < ApplicationController
   end
 
   def destroy
+  	Owner.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to owners_path
+
   end
 
   def edit

@@ -40,7 +40,10 @@
 			  
 			</div>
 			<div class="col-sm-2">
-			<%= link_to "Update", owner_path(@owner), class:"btn btn-warning"%>
+			<%= link_to "Update", owner_path(@owner), class:"btn btn-warning btn-block"%><br>
+			<%= link_to "Delete", @owner, method: :delete, class:"btn btn-danger btn-block",
+                                  data: { confirm: "You sure?" } %><br>
+			<%= link_to "Device", device_path(@owner.id), class:"btn btn-primary btn-block"%><br>
 			</div>
 		</div>			
 		

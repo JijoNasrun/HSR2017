@@ -6,8 +6,9 @@ def show
 end
 
 def index
-    @reports = Report.all
-    render json: @reports
+	 
+    @data = [Report.select("date(date_captured)").distinct,Report.select("date(date_captured)").count]
+    render json: @data
 end
 def new
 	@report = Report.new

@@ -1,0 +1,11 @@
+ <%= form_for(:device) do |f| %>
+ <% provide(:button_text,'Create Device')%>
+
+
+      
+      <%options = options_from_collection_for_select(@owner, 'id', 'name') %>
+
+	  <%= f.select :owner_id,  options, {} ,class: "form-control" %>
+
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>

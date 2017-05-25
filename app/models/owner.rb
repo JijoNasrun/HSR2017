@@ -1,4 +1,6 @@
 class Owner < ApplicationRecord
+
+
 mount_uploader :owner_image, ImageUploader
 	validates_processing_of :owner_image
 	validate :image_size_validation

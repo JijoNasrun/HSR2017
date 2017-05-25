@@ -49,6 +49,8 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
+  post 'devices/new', to: 'devices#create'
+
 
 
   resources :owners
@@ -56,6 +58,8 @@ Rails.application.routes.draw do
   resources :users
 
   resources :reports_api
+
+  resources :devices
 
   root 'static_pages#home'
 
